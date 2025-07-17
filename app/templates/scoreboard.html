@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Scoreboard</title>
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='scoreboard_style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="teams">
+            <div class="team-block">
+                <div class="team-name" id="team1_name">{{ state.team1_name }}</div>
+                <div class="score" id="team1_score">{{ state.team1_score }}</div>
+            </div>
+            <div class="team-block">
+                <div class="team-name" id="team2_name">{{ state.team2_name }}</div>
+                <div class="score" id="team2_score">{{ state.team2_score }}</div>
+            </div>
+        </div>
+        <div class="timer" id="timer">00:00</div>
+    </div>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+
+</html>

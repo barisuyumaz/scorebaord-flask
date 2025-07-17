@@ -1,0 +1,61 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+}
+
+.username {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.role {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.badge {
+    background-color: #6c757d;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+.actions {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.logout {
+    background-color: #dc3545;
+}
+
+.logout:hover {
+    background-color: #a71d2a;
+}

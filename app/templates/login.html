@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Giriş Yap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='auth.css') }}">
+</head>
+
+<body>
+    <div class="auth-container">
+        <h2>Giriş Yap</h2>
+        <form method="POST">
+            <label for="username">Kullanıcı Adı</label>
+            <input type="text" name="username" id="username" required>
+
+            <label for="password">Şifre</label>
+            <input type="password" name="password" id="password" required>
+
+            <button type="submit">Giriş Yap</button>
+        </form>
+        <p>Hesabınız yok mu? <a href="{{ url_for('routes.register') }}">Kayıt Ol</a></p>
+    </div>
+</body>
+
+</html>

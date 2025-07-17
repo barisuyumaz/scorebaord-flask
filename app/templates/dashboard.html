@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Hoş geldin, <span class="username">{{ current_user.username }}</span>!</h2>
+
+        {% if current_user.role == 'gorevli' %}
+        <p class="role">Rolün: <span class="badge">Görevli</span></p>
+        {% elif current_user.role == 'hakem' %}
+        <p class="role">Rolün: <span class="badge">Hakem</span></p>
+        {% endif %}
+
+        <div class="actions">
+            <a href="{{ url_for('routes.manage') }}" class="btn">Skor Yönetimi</a>
+            <a href="{{ url_for('routes.scoreboard') }}" class="btn">Skorboard</a>
+            <a href="{{ url_for('routes.logout') }}" class="btn logout">Çıkış Yap</a>
+        </div>
+    </div>
+</body>
+
+</html>

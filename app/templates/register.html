@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kayıt Ol</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='auth.css') }}">
+</head>
+
+<body>
+    <div class="auth-container">
+        <h2>Kayıt Ol</h2>
+        <form method="POST">
+            <label for="username">Kullanıcı Adı</label>
+            <input type="text" name="username" id="username" required>
+
+            <label for="password">Şifre</label>
+            <input type="password" name="password" id="password" required>
+
+            <label for="role">Rol</label>
+            <select name="role" id="role" required>
+                <option value="gorevli">Görevli</option>
+                <option value="hakem">Hakem</option>
+            </select>
+
+            <button type="submit">Kayıt Ol</button>
+        </form>
+        <p>Zaten hesabınız var mı? <a href="{{ url_for('routes.login') }}">Giriş Yap</a></p>
+    </div>
+</body>
+
+</html>

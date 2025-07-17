@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.teams {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    max-width: 600px;
+}
+
+.team-block {
+    text-align: center;
+    flex: 1;
+}
+
+.team-name {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.score {
+    font-size: 5rem;
+    color: red;
+    text-shadow: 0 0 10px red, 0 0 20px red;
+}
+
+.timer {
+    font-size: 2rem;
+    color: red;
+    text-shadow: 0 0 10px red, 0 0 20px red;
+    letter-spacing: 6px;
+    margin-top: 20px;
+}

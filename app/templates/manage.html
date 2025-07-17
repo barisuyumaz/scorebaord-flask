@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yönetim Paneli</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='manage_style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Yönetim Paneli</h1>
+
+        <!-- Takım ve Skor Ayarları -->
+        <form method="POST" class="card" action="#teams_scores">
+            <input type="hidden" name="action" value="update_scores">
+            <h2>Takım Bilgileri</h2>
+            <div class="form-group">
+                <label>Takım 1 Adı</label>
+                <input type="text" name="team1_name" value="{{ state.team1_name }}">
+            </div>
+            <div class="form-group">
+                <label>Skor</label>
+                <input type="number" name="team1_score" value="{{ state.team1_score }}">
+            </div>
+            <div class="form-group">
+                <label>Takım 2 Adı</label>
+                <input type="text" name="team2_name" value="{{ state.team2_name }}">
+            </div>
+            <div class="form-group">
+                <label>Skor</label>
+                <input type="number" name="team2_score" value="{{ state.team2_score }}">
+            </div>
+            <button type="submit">Skorları Güncelle</button>
+        </form>
+        <div id="teams_scores"></div>
+
+        <!-- Süre Ayarları -->
+        <form method="POST" class="card" action="#timer">
+            <input type="hidden" name="action" value="set_time">
+            <h2>Süre Ayarla</h2>
+            <div class="form-group">
+                <label>Dakika</label>
+                <input type="number" name="minute" value="{{ state.minute }}">
+            </div>
+            <div class="form-group">
+                <label>Saniye</label>
+                <input type="number" name="second" value="{{ state.second }}">
+            </div>
+            <button type="submit">Süreyi Ayarla</button>
+        </form>
+        <div id="timer"></div>
+        <!-- Başlat / Durdur -->
+        <div class="buttons">
+            <form method="POST">
+                <input type="hidden" name="action" value="start_timer">
+                <button type="submit" class="start">Süreyi Başlat / Sürdür</button>
+            </form>
+            <form method="POST">
+                <input type="hidden" name="action" value="stop_timer">
+                <button type="submit" class="stop">Süreyi Durdur</button>
+            </form>
+        </div>
+
+        <!-- Navigasyon -->
+        <div class="nav-links">
+            <a href="{{ url_for('routes.dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('routes.scoreboard') }}">Scoreboard</a>
+        </div>
+    </div>
+</body>
+
+</html>
