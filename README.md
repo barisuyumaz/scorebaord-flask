@@ -27,7 +27,7 @@ A real-time scoreboard web application built with Flask and Socket.IO for managi
 - Flask-SocketIO
 - Flask-Login
 - SQLAlchemy
-- PostgreSQL or SQLite (optional)
+- PostgreSQL
 
 ---
 
