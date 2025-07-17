@@ -8,7 +8,7 @@ A real-time scoreboard web application built with Flask and Socket.IO for managi
 
 - User authentication (Referee or Official roles)
 - Start, pause, and update live match timer
-- Real-time updates for team names, scores, fouls, and period
+- Real-time updates for team names, scores and period
 - Instant data broadcasting with WebSocket (Socket.IO)
 - Separate views for scoreboard and management panel
 - Timer continues globally regardless of user sessions
@@ -35,7 +35,7 @@ A real-time scoreboard web application built with Flask and Socket.IO for managi
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/scoreboard-app.git
+git clone https://github.com/barisuyumaz/scoreboard-app.git
 cd scoreboard-app
 
 # 2. Create a virtual environment
